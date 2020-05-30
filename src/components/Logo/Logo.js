@@ -7,5 +7,5 @@ const logo = (props) => (
         <img alt="My Logo" src={burgerLogo}/>
     </div>
 );
- 
+
 export default logo;

@@ -43,6 +43,7 @@
     "postcss-normalize": "8.0.1",
     "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "4.0.1",
+    "pre-commit": "^1.2.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-app-polyfill": "^1.0.6",
@@ -58,13 +59,23 @@
     "webpack": "4.42.0",
     "webpack-dev-server": "3.10.3",
     "webpack-manifest-plugin": "2.2.0",
-    "workbox-webpack-plugin": "4.3.1"
+    "workbox-webpack-plugin": "4.3.1",
+    "stylelint": "^9.9.0",
+    "stylelint-config-standard": "^18.2.0"
   },
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "lint-lib": "tslint --project tsconfig.json --config tslint.json \"./projects/my-project/src/**/*.ts\"",
+    "lint-styles-lib": "stylelint \"./projects/my-project/src/**/*.scss\"",
+    "test-lib-pre-commit": "ng test my-project --watch=false --code-coverage --browsers=ChromeHeadless"
   },
+  "pre-commit": [
+    "lint-lib",
+    "lint-styles-lib",
+    "test-lib-pre-commit"
+  ],
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -137,6 +148,8 @@
   },
   "devDependencies": {
     "file-loader": "^6.0.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.7",
     "url-loader": "^4.1.0"
   }
 }

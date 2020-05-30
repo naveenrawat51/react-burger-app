@@ -1,9 +1,10 @@
 import React from 'react';
 import classes from './NavigationItem.css';
+import PropTypes from 'prop-types';
 
 const navigationItem = (props) => (
     <li className={classes.NavigationItem}>
-        <a  data-naveen={props.active}
+        <a
             href={props.link}
             className={props.active ? classes.active : null}>
             {props.children}
@@ -11,4 +12,8 @@ const navigationItem = (props) => (
     </li>
 )
 
+navigationItem.propTypes = {
+    link: PropTypes.string.isRequired,
+    active: PropTypes.bool
+}
 export default navigationItem;
