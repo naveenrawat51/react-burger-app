@@ -16,4 +16,5 @@ navigationItem.propTypes = {
     link: PropTypes.string.isRequired,
     active: PropTypes.bool
 }
+
 export default navigationItem;
