@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import classes from './Orders.css';
 import Order from '../../components/Order/Order';
 import axios from '../../axios-orders';
 import WithErrorHandler from '../../hoc/WithErrorHandler/WithErrorHandler';
