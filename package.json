@@ -21,7 +21,7 @@
     "css-loader": "3.4.2",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
-    "eslint": "^6.6.0",
+    "eslint": "^6.8.0",
     "eslint-config-react-app": "^5.2.1",
     "eslint-loader": "3.0.3",
     "eslint-plugin-flowtype": "4.6.0",
@@ -71,7 +71,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "lint-lib": "tslint --project tsconfig.json --config tslint.json \"./projects/my-project/src/**/*.ts\"",
+    "lint-lib": "tslint --project tsconfig.json --config tslint.json \"./projects/my-project/src/**/*.js\"",
     "lint-styles-lib": "stylelint \"./projects/my-project/src/**/*.scss\"",
     "test-lib-pre-commit": "ng test my-project --watch=false --code-coverage --browsers=ChromeHeadless"
   },
