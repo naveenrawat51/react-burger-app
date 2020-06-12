@@ -10,9 +10,10 @@ const burger = (props) => {
                 return <BurgerIngredient key={igKey + i} type={igKey}></BurgerIngredient>
             })
         });
-
-    if (Object.values(props.ingredients).reduce((a, b) => a + b) === 0) {
-        transformIngredients = <p>Please start adding ingredients!!</p>
+    if(Object.keys(props.ingredients).length > 0) {
+        if (Object.values(props.ingredients).reduce((a, b) => a + b) === 0) {
+            transformIngredients = <p>Please start adding ingredient!!</p>
+        }
     }
     return (
         <div className={classes.Burger}>

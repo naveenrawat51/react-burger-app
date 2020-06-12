@@ -12,7 +12,7 @@ class Checkout extends Component {
     componentWillMount() {
         const query = new URLSearchParams(this.props.location.search);
         const ingredients = {};
-        const price = 0;
+        let price = 0;
         for (let param of query.entries()) {
             if(param[0] === 'price'){
                 price = param[1];

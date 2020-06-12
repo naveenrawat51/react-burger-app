@@ -29,7 +29,6 @@ class Orders extends Component {
     render() {
         return (
             <div>
-                <p>length: {this.state.orders.length}</p>
                 {this.state.orders.map(order => (<Order
                     key={order.id}
                     ingredients={order.ingrediends}
