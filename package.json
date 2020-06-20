@@ -76,6 +76,22 @@
     "lint:js": "eslint . --ext .js,.jsx",
     "lint:js:fix": "npm run lint:js -- --fix"
   },
+  "husky": {
+    "hooks": {
+        "pre-commit": "lint-staged"
+    }
+},
+"lint-staged": {
+    "*.{js,ts,css,json,md}": [
+        "prettier --write",
+        "git add"
+    ],
+    "*.{ts}": [
+        "npm run lint",
+        "eslint --fix",
+        "git add"
+    ]
+},
   "pre-commit": [
     "lint-lib",
     "lint-styles-lib",
