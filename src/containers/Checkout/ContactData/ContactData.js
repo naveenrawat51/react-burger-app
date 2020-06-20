@@ -160,7 +160,7 @@ class ContactData extends Component {
                 config: this.state.orderForm[key]
             })
         }
-        let form = (
+        const form = (
             <form onSubmit={this.orderHandler}>
                 {formElementsArray.map((formElement, index) => (
                     <Input

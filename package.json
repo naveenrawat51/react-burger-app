@@ -44,7 +44,6 @@
     "postcss-normalize": "8.0.1",
     "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "4.0.1",
-    "pre-commit": "^1.2.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-app-polyfill": "^1.0.6",
@@ -73,29 +72,26 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "lint:js": "eslint . --ext .js,.jsx",
-    "lint:js:fix": "npm run lint:js -- --fix"
+    "lint": "eslint --ext .jsx,.js src/  --fix ./src --cache"
   },
   "husky": {
     "hooks": {
-        "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged"
     }
-},
-"lint-staged": {
+  },
+  "lint-staged": {
     "*.{js,ts,css,json,md}": [
-        "prettier --write",
-        "git add"
+      "prettier --write",
+      "git add"
     ],
     "*.{ts}": [
-        "npm run lint",
-        "eslint --fix",
-        "git add"
+      "npm run lint",
+      "eslint --fix",
+      "git add"
     ]
-},
+  },
   "pre-commit": [
-    "lint-lib",
-    "lint-styles-lib",
-    "test-lib-pre-commit"
+    "lint"
   ],
   "eslintConfig": {
     "extends": "react-app"
@@ -171,6 +167,7 @@
     "file-loader": "^6.0.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.9",
+    "pre-commit": "^1.2.2",
     "url-loader": "^4.1.0"
   }
 }
