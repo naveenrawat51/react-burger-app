@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Open [https://react-my-burger-8014e.web.app/](https://react-my-burger-8014e.web.app/) to view it in the browser.
+
+To login into all use following credentials:
+username: admin@gmail.com
+password: admin6
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -66,3 +72,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+Feel free to ask any question you have to naveenrawat51@gmail.com
