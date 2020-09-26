@@ -1,66 +1,65 @@
-import * as actionTypes from './actionTypes';
+import * as actionTypes from "./actionTypes";
 
 export const authStart = () => {
-    return {
-        type: actionTypes.AUTH_START
-    };
+  return {
+    type: actionTypes.AUTH_START,
+  };
 };
 
 export const authSuccess = (authData) => {
-    return {
-        type: actionTypes.AUTH_SUCCESS,
-        data: authData
-    };
+  return {
+    type: actionTypes.AUTH_SUCCESS,
+    data: authData,
+  };
 };
 
 export const authFail = (error) => {
-    return {
-        type: actionTypes.AUTH_FAIL,
-        error: error
-    };
+  return {
+    type: actionTypes.AUTH_FAIL,
+    error: error,
+  };
 };
 
 export const logout = () => {
-    // code moved to saga that's why commented
-    // localStorage.removeItem('token');
-    // localStorage.removeItem('expirationDate');
-    // localStorage.removeItem('userId');
-    return {
-        type: actionTypes.AUTH_INITIATE_LOGOUT
-    };
+  // code moved to saga that's why commented
+  // localStorage.removeItem('token');
+  // localStorage.removeItem('expirationDate');
+  // localStorage.removeItem('userId');
+  return {
+    type: actionTypes.AUTH_INITIATE_LOGOUT,
+  };
 };
 
 export const logoutSucceed = () => {
-    return {
-        type: actionTypes.AUTH_LOGOUT
-    }
-}
-export const checkAuthTimeout = expirationTime => {
-    return {
-        type: actionTypes.AUTH_CHECK_TIMEOUT,
-        expirationTime: expirationTime     
-    }
-
+  return {
+    type: actionTypes.AUTH_LOGOUT,
+  };
+};
+export const checkAuthTimeout = (expirationTime) => {
+  return {
+    type: actionTypes.AUTH_CHECK_TIMEOUT,
+    expirationTime: expirationTime,
+  };
 };
 
 export const auth = (email, password, isSignup) => {
-    return {
-        type: actionTypes.AUTH_USER,
-        email: email,
-        password: password,
-        isSignup: isSignup
-    }
-}
+  return {
+    type: actionTypes.AUTH_USER,
+    email: email,
+    password: password,
+    isSignup: isSignup,
+  };
+};
 
-export const setAuthRedirectPath = path => {
-    return {
-        type: actionTypes.SET_AUTH_REDIRECT_PATH,
-        path: path
-    }
-}
+export const setAuthRedirectPath = (path) => {
+  return {
+    type: actionTypes.SET_AUTH_REDIRECT_PATH,
+    path: path,
+  };
+};
 
 export const authCheckState = () => {
-    return {
-        type: actionTypes.AUTH_CHECK_INITIAL_STATE
-    }
-}
+  return {
+    type: actionTypes.AUTH_CHECK_INITIAL_STATE,
+  };
+};
